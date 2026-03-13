@@ -1,0 +1,14 @@
+version: 1
+rules:
+  high_priority:
+    - type: security
+      severity: critical
+file_rules:
+  "src/backend/auth/**":
+    priority: critical
+    require_manual_review: true
+slow_lane:
+  min_files: 25
+embedding:
+  enabled: true
+  model: mixedbread-ai/mxbai-embed-large-v1
